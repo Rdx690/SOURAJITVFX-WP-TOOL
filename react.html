@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>React • SOURAJITVFX WP TOOL</title>
+<style>
+:root{--c1:#00e5ff;--c2:#7c4dff;--c3:#ff2fd0;--ink:#0b1020;--mut:#6b7390}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,sans-serif;color:var(--ink);background:#f5f7ff;padding:20px 16px 120px;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:fl 14s ease-in-out infinite}
+.b1{width:320px;height:320px;background:var(--c3);top:-80px;left:-80px}
+.b2{width:360px;height:360px;background:var(--c2);top:35%;right:-120px;animation-delay:-4s}
+.b3{width:300px;height:300px;background:var(--c1);bottom:-80px;left:10%;animation-delay:-8s}
+@keyframes fl{50%{transform:translate(40px,-30px) scale(1.15)}}
+.wrap{max-width:560px;margin:0 auto}
+.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.85);box-shadow:0 10px 40px rgba(124,77,255,.16),inset 0 1px 0 #fff;border-radius:28px}
+.top{display:flex;align-items:center;gap:12px;padding:4px 2px 18px}
+.back{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;text-decoration:none;color:var(--c2);font-size:22px;font-weight:700}
+h1{font-size:22px;margin:0;font-weight:800;background:linear-gradient(90deg,var(--c3),var(--c2),#00b8d4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:12px;color:var(--mut)}
+.card{padding:22px;margin-bottom:16px}
+label{display:block;font-size:12px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.7px;margin:0 0 8px 4px}
+.field{margin-bottom:18px}
+input{width:100%;padding:16px 18px;border-radius:18px;border:1.5px solid rgba(124,77,255,.15);background:rgba(255,255,255,.75);font-size:15px;color:var(--ink);outline:none;transition:.2s;font-family:inherit}
+input:focus{border-color:var(--c1);box-shadow:0 0 0 4px rgba(0,229,255,.18),0 0 24px rgba(0,229,255,.25)}
+.chips{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.chip{aspect-ratio:1;border-radius:16px;border:1.5px solid rgba(124,77,255,.12);background:rgba(255,255,255,.7);font-size:24px;cursor:pointer;transition:.2s;display:grid;place-items:center}
+.chip:active{transform:scale(.88)}
+.chip.on{background:linear-gradient(135deg,rgba(0,229,255,.25),rgba(124,77,255,.25));border-color:var(--c1);box-shadow:0 0 18px rgba(0,229,255,.55);transform:scale(1.06)}
+.sel{display:flex;flex-wrap:wrap;gap:6px;min-height:34px;margin-top:12px;font-size:12px;color:var(--mut);align-items:center}
+.sel span{font-size:20px}
+.btn{width:100%;padding:17px;border:0;border-radius:20px;font-size:16px;font-weight:800;color:#fff;cursor:pointer;background:linear-gradient(135deg,var(--c1),var(--c2) 55%,var(--c3));box-shadow:0 0 30px rgba(124,77,255,.5),0 8px 24px rgba(0,229,255,.35);transition:.2s;font-family:inherit}
+.btn:active{transform:scale(.97)}.btn:disabled{opacity:.6}
+.adv{font-size:13px;color:var(--c2);font-weight:700;cursor:pointer;margin:0 0 14px 4px;display:inline-block}
+#advBox{display:none}
+.res{padding:18px;display:none}
+.res h4{margin:0 0 10px;display:flex;align-items:center;gap:8px;font-size:15px}
+.res pre{margin:0;padding:14px;border-radius:16px;background:rgba(11,16,32,.88);color:#7dffcf;font-size:12px;overflow:auto;max-height:240px;white-space:pre-wrap;word-break:break-all}
+.toast{position:fixed;top:18px;left:50%;transform:translate(-50%,-120px);padding:13px 22px;border-radius:99px;font-size:14px;font-weight:700;z-index:20;transition:.4s cubic-bezier(.2,1.3,.4,1)}
+.toast.show{transform:translate(-50%,0)}
+nav{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:4px;padding:8px;border-radius:30px;z-index:9}
+nav a{padding:11px 20px;border-radius:22px;text-decoration:none;color:var(--mut);font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center}
+nav a.on{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;box-shadow:0 0 22px rgba(0,229,255,.55)}
+.sp{width:16px;height:16px;border:2.5px solid #fff5;border-top-color:#fff;border-radius:50%;display:inline-block;animation:s .7s linear infinite;vertical-align:-3px;margin-right:8px}
+@keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="toast glass" id="toast"></div>
+<div class="wrap">
+  <div class="top"><a class="glass back" href="index.html">‹</a><div><h1>Channel React</h1><div class="sub">SOURAJITVFX WP TOOL</div></div></div>
+  <section class="glass card">
+    <div class="field"><label>Channel Post URL</label><input id="url" type="url" placeholder="https://whatsapp.com/channel/xxxxx/123" autocomplete="off"></div>
+    <div class="field"><label>Pick Emojis</label><div class="chips" id="chips"></div><div class="sel" id="sel">Koi emoji select nahi</div></div>
+    <div class="field"><label>Custom Emoji (optional)</label><input id="custom" placeholder="Type or paste emoji, e.g. 🔥💎" autocomplete="off"></div>
+    <span class="adv" id="advT">⚙︎ Advanced</span>
+    <div id="advBox" class="field"><label>API Base URL</label><input id="base" value="https://api.omegatech.app"></div>
+    <button class="btn" id="go">🚀 Send Reactions</button>
+  </section>
+  <section class="glass res" id="res"><h4 id="rt">Response</h4><pre id="out"></pre></section>
+</div>
+<nav class="glass"><a href="index.html">🏠 Home</a><a class="on" href="react.html">😍 React</a><a href="poll.html">🗳️ Poll</a></nav>
+<script>
+const EM=['🔥','❤️','😍','😂','👍','🙏','😮','😢','🎉','💯','🤩','👏','😎','🥰','💎','⚡','🚀','🌟','😘','🤯','💪','🙌','👑','✨'];
+const picked=new Set();
+const $=id=>document.getElementById(id);
+$('chips').innerHTML=EM.map(e=>`<button class="chip" data-e="${e}">${e}</button>`).join('');
+$('chips').onclick=ev=>{const b=ev.target.closest('.chip');if(!b)return;const e=b.dataset.e;picked.has(e)?picked.delete(e):picked.add(e);b.classList.toggle('on');draw();navigator.vibrate&&navigator.vibrate(8)};
+const custom=()=>[...($('custom').value.match(/\p{Extended_Pictographic}(?:\uFE0F|\u200D\p{Extended_Pictographic})*/gu)||[])];
+const all=()=>[...new Set([...picked,...custom()])];
+function draw(){const a=all();$('sel').innerHTML=a.length?a.map(e=>`<span>${e}</span>`).join('')+`<b style="margin-left:6px">${a.length} selected</b>`:'Koi emoji select nahi'}
+$('custom').oninput=draw;
+$('advT').onclick=()=>{const b=$('advBox');b.style.display=b.style.display==='block'?'none':'block'};
+function toast(m,ok){const t=$('toast');t.textContent=m;t.style.color=ok?'#00a152':'#d50040';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+function log(o){try{const l=JSON.parse(localStorage.getItem('svfx_log')||'[]');l.unshift({...o,t:Date.now()});localStorage.setItem('svfx_log',JSON.stringify(l.slice(0,50)))}catch(e){}}
+$('go').onclick=async()=>{
+  const url=$('url').value.trim(),em=all();
+  if(!/^https?:\/\/(www\.)?whatsapp\.com\/channel\//i.test(url))return toast('Valid WhatsApp channel post URL daalo',false);
+  if(!em.length)return toast('Kam se kam 1 emoji chuno',false);
+  const btn=$('go');btn.disabled=true;btn.innerHTML='<span class="sp"></span>Sending...';
+  const q=new URLSearchParams({action:'react',url,emojis:em.join(',')});
+  let ok=false,text='';
+  try{
+    const r=await fetch($('base').value.replace(/\/$/,'')+'/api/tools/react-channel?'+q);
+    text=await r.text();ok=r.ok;
+    try{const j=JSON.parse(text);text=JSON.stringify(j,null,2);if(j.success===false||j.status===false||j.error)ok=false}catch(e){}
+  }catch(e){text='Network/CORS error: '+e.message+'\n\nTip: agar CORS block ho raha ho to page ko same domain ya proxy se chalao.'}
+  $('res').style.display='block';$('rt').innerHTML=(ok?'✅ Success':'❌ Failed');$('out').textContent=text;
+  toast(ok?'Reactions sent! 🎉':'Request failed',ok);
+  log({type:'react',ok,url,detail:em.join(' ')});
+  btn.disabled=false;btn.textContent='🚀 Send Reactions';
+};
+</script>
+</body>
+</html>
