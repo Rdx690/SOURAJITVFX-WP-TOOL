@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SOURAJITVFX WP TOOL</title>
+<style>
+:root{--c1:#00e5ff;--c2:#7c4dff;--c3:#ff2fd0;--ink:#0b1020;--mut:#6b7390}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,sans-serif;color:var(--ink);background:#f5f7ff;padding:20px 16px 120px;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:fl 14s ease-in-out infinite}
+.b1{width:320px;height:320px;background:var(--c1);top:-80px;left:-80px}
+.b2{width:360px;height:360px;background:var(--c2);top:30%;right:-120px;animation-delay:-4s}
+.b3{width:300px;height:300px;background:var(--c3);bottom:-80px;left:10%;animation-delay:-8s}
+@keyframes fl{50%{transform:translate(40px,-30px) scale(1.15)}}
+.wrap{max-width:560px;margin:0 auto}
+.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.85);box-shadow:0 10px 40px rgba(124,77,255,.16),inset 0 1px 0 #fff;border-radius:28px}
+header{display:flex;align-items:center;justify-content:space-between;padding:6px 4px 18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo i{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--c1),var(--c2),var(--c3));display:grid;place-items:center;color:#fff;font-style:normal;font-size:22px;box-shadow:0 0 24px rgba(0,229,255,.6)}
+h1{font-size:19px;margin:0;font-weight:800;letter-spacing:.3px;background:linear-gradient(90deg,#00b8d4,var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:12px;color:var(--mut);margin-top:2px}
+.live{font-size:12px;font-weight:600;padding:7px 12px;border-radius:99px;background:rgba(0,230,118,.15);color:#00a152;display:flex;gap:6px;align-items:center}
+.live:before{content:"";width:8px;height:8px;border-radius:50%;background:#00e676;box-shadow:0 0 10px #00e676;animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.3}}
+.hero{padding:26px 22px;margin-bottom:16px;position:relative;overflow:hidden}
+.hero h2{margin:0 0 6px;font-size:28px;line-height:1.15;font-weight:800}
+.hero p{margin:0;color:var(--mut);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.stat{padding:16px 10px;text-align:center;border-radius:22px}
+.stat b{display:block;font-size:26px;font-weight:800;background:linear-gradient(135deg,#00b8d4,var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.6px}
+.tool{display:flex;gap:16px;align-items:center;padding:20px;margin-bottom:14px;text-decoration:none;color:inherit;transition:.25s}
+.tool:active{transform:scale(.97)}
+.tool:hover{box-shadow:0 14px 50px rgba(0,229,255,.3),inset 0 1px 0 #fff}
+.ic{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;font-size:28px;color:#fff;flex:none}
+.i1{background:linear-gradient(135deg,#ff2fd0,#ff8a00);box-shadow:0 0 24px rgba(255,47,208,.5)}
+.i2{background:linear-gradient(135deg,#00e5ff,#7c4dff);box-shadow:0 0 24px rgba(0,229,255,.5)}
+.tool h3{margin:0;font-size:17px}.tool p{margin:3px 0 0;font-size:13px;color:var(--mut)}
+.tool .ar{margin-left:auto;font-size:22px;color:var(--c2)}
+.sec{font-size:13px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.8px;margin:22px 6px 10px;display:flex;justify-content:space-between}
+.sec a{color:var(--c2);text-transform:none;cursor:pointer;letter-spacing:0}
+.log{padding:6px 16px}
+.row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid rgba(124,77,255,.1);font-size:13px}
+.row:last-child{border:0}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.ok{background:#00e676;box-shadow:0 0 10px #00e676}.er{background:#ff3d71;box-shadow:0 0 10px #ff3d71}
+.row div{flex:1;min-width:0}.row b{display:block}.row small{color:var(--mut);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.empty{padding:26px;text-align:center;color:var(--mut);font-size:13px}
+nav{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:4px;padding:8px;border-radius:30px;z-index:9}
+nav a{padding:11px 20px;border-radius:22px;text-decoration:none;color:var(--mut);font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center}
+nav a.on{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;box-shadow:0 0 22px rgba(0,229,255,.55)}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="wrap">
+<header>
+  <div class="logo"><i>⚡</i><div><h1>SOURAJITVFX WP TOOL</h1><div class="sub">WhatsApp Channel Suite</div></div></div>
+  <div class="live">Live</div>
+</header>
+<section class="glass hero">
+  <h2>React &amp; Poll<br>in one tap ✨</h2>
+  <p>Channel post par emoji reaction aur poll vote — fast, clean, iOS glass style.</p>
+</section>
+<section class="stats">
+  <div class="glass stat"><b id="sTotal">0</b><span>Total</span></div>
+  <div class="glass stat"><b id="sReact">0</b><span>Reacts</span></div>
+  <div class="glass stat"><b id="sVote">0</b><span>Votes</span></div>
+</section>
+<a class="glass tool" href="react.html"><div class="ic i1">😍</div><div><h3>Channel React</h3><p>Multiple emoji reactions bhejo</p></div><span class="ar">›</span></a>
+<a class="glass tool" href="poll.html"><div class="ic i2">🗳️</div><div><h3>Poll Vote</h3><p>Channel poll me vote cast karo</p></div><span class="ar">›</span></a>
+<div class="sec">Recent Activity <a id="clr">Clear</a></div>
+<section class="glass log" id="log"></section>
+</div>
+<nav class="glass"><a class="on" href="index.html">🏠 Home</a><a href="react.html">😍 React</a><a href="poll.html">🗳️ Poll</a></nav>
+<script>
+const KEY='svfx_log';
+const get=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}};
+function render(){
+  const l=get();
+  sTotal.textContent=l.length;
+  sReact.textContent=l.filter(x=>x.type==='react').length;
+  sVote.textContent=l.filter(x=>x.type==='vote').length;
+  log.innerHTML=l.length?l.slice(0,8).map(x=>`<div class="row"><span class="dot ${x.ok?'ok':'er'}"></span><div><b>${x.type==='react'?'React '+(x.detail||''):'Vote: '+(x.detail||'')}</b><small>${x.url}</small></div><small>${new Date(x.t).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</small></div>`).join(''):'<div class="empty">Abhi koi activity nahi. Koi tool use karo 🚀</div>';
+}
+clr.onclick=()=>{localStorage.removeItem(KEY);render()};
+render();
+</script>
+</body>
+</html>
